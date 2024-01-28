@@ -81,19 +81,6 @@ class EllipticCurve:
             k //= 2
         return result
 
-    def scaling(self, k, P):
-        """
-        Double-and-Add : Algoritmo eficiente para computar multiplicação escalar de Curvas Elípticas
-        """
-        result = (0, 0)
-        addend = P
-        while k > 0:
-            if k % 2 == 1:
-                result = self.add_PQ(result, addend, )
-            addend = self.add_PQ(addend, addend)
-            k //= 2
-        return result
-
     def hasse_theorem(self):
         return (self.p+1) + 2*math.sqrt(self.p)
     
