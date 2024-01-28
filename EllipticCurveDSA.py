@@ -43,9 +43,9 @@ class ECDSA:
 
             x1, y1 = self.EC.encontra_nP(k, self.QA)
 
-            r = x1 % self.EC.p
+            r = x1 % self.EC.order
 
-            s = (pow(k, -1, self.EC.p) * (z + r * self.dA)) % self.EC.p
+            s = (pow(k, -1, self.EC.order) * (z + r * self.dA)) % self.EC.order
 
         return r, s
     
