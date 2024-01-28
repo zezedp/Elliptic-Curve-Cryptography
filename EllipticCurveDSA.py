@@ -73,6 +73,4 @@ class ECDSA:
         return "Valid Signature!"
     
 digitalSignature = ECDSA(1,1, 6846869858332693264879382366866797734569, (0,1), order=6846869858332693264898511507613378704826)
-r,s=digitalSignature.sign_message("oi rosieeee")
-
-print(digitalSignature.verify_signature("oi rosieeee", r,s))
+r,s=digitalSignature.sign_message("Elliptic Curves are Awesome!")
